@@ -1,0 +1,18 @@
+#board {
+	position:relative;
+}
+
+
+.row_0 {
+	position:absolute;
+	background-color:red;
+	top:0;
+}
+
+.column_0 {
+	position:absolute;
+	width:140px;
+	height:140px;
+	left:0;
+
+}

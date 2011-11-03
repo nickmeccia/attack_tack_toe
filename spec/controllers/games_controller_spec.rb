@@ -21,7 +21,34 @@ describe GamesController do
       
       session[:game].should == assigns[:game]
     end
+    
+    it "renders the 'show' template" do
+      get :human_vs_human
+      
+      response.should render_template("games/show")
+    end
   end
+  
+  context "human_vs_human" do
+    it "creates a game with humans as both players" do
+      get :human_vs_human
+      
+      assigns[:game].player_one.should be_kind_of(Human)
+      assigns[:game].player_two.should be_kind_of(Human)
+    end
+
+    it "saves the game in the session" do
+      get :human_vs_human
+      
+      session[:game].should == assigns[:game]
+    end
+    
+    it "renders the 'show' template" do
+      get :human_vs_human
+      
+      response.should render_template("games/show")
+    end
+end
   
   context "make_move" do
     before(:each) do

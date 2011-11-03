@@ -6,6 +6,7 @@ TicTacToeRails::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   match 'human_vs_computer' => "games#human_vs_computer"
   match 'games/make_move' => "games#make_move", :as => "make_move"
+  match 'human_vs_human' => "games#human_vs_human"
   
   # Keep in mind you can assign values other than :controller and :action
 
