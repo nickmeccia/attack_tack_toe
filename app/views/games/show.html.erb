@@ -1,21 +1,32 @@
-<div id="board">
-	<div id="play_area">
-		<% @game.board.rows.each_with_index do |row, row_index| %>
-			<div class="row_#{row_index}">
-				<% row.each_with_index do |cell, column_index| %>
-					<span class="column_#{column_index}">
-						<% if !@game.over? && cell.blank? %>
-							<%= link_to image_tag("empty_cell.png"), make_move_path(:row_number => row_index, :column_number => column_index, :game => @game) %>
-						<% elsif @game.over? && cell.blank? %>
-							<%= image_tag("empty_cell.png") %>
-						<% else %>
-							<%= image_tag @images[position(column_index, row_index)] %>
-						<% end %>
-					</span>
-				<% end %>
-			</div>
-		<% end %>
+<div id="layout">
+	<div id="player_one_sidebar">
+		<%= image_tag "#{@game.player_one.team}_sidebar.png" %>
 	</div>
+
+	<div id="board">
+		<div id="play_area">
+			<% @game.board.rows.each_with_index do |row, row_index| %>
+				<div class="row_#{row_index}">
+					<% row.each_with_index do |cell, column_index| %>
+						<span class="column_#{column_index}">
+							<% if !@game.over? && cell.blank? %>
+								<%= link_to image_tag("empty_cell.png"), make_move_path(:row_number => row_index, :column_number => column_index, :game => @game) %>
+							<% elsif @game.over? && cell.blank? %>
+								<%= image_tag("empty_cell.png") %>
+							<% else %>
+								<%= image_tag @images[position(column_index, row_index)] %>
+							<% end %>
+						</span>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+
+	<div id="player_two_sidebar">
+			<%= image_tag "#{@game.player_two.team}_sidebar.png" %>
+	</div>
+
 </div>
 
 

@@ -1,8 +1,69 @@
+#layout {
+	position:relative;
+	width:960px;
+	height:640px;
+}
+
+/******** character select *********/
+
+#character_select {
+	background-image:url('character_select_vanilla.png');
+	width:960px;
+	height:640px;
+}
+
+a.orange_player {
+	width:507px;
+	height:640px;
+	position:absolute;
+	z-index:2;
+}
+
+a.orange_player:hover {
+	background-image:url('character_select_orange_transparent.png');
+	background-repeat:no-repeat;
+	width:960px;
+	z-index:2px;
+}
+
+a.cyan_player {
+	width:453px;
+	height:640px;
+	position:absolute;
+	top:0px;
+	left:507px;
+	z-index:2;
+}
+
+a.cyan_player:hover {
+	background-image:url('character_select_cyan_transparent.png');
+	background-repeat:no-repeat;
+	width:960px;
+	position:absolute;
+	left:411px;
+}
+
+
+
+
+/*********** board layout ***********/
+
+#player_one_sidebar {
+	position:absolute;
+}
+
+#player_two_sidebar {
+	position:absolute;
+	left:800px;
+	top:0px;
+}
+
 #board {
 	position:relative;
 	background-image:url('board.png');
 	width:640px;
 	height:640px;
+	left:160px;
 }
 
 #play_area {
