@@ -6,6 +6,16 @@
 
 /******** character select *********/
 
+#loading_screen {
+	background-image:url('loading_screen.png');
+	width:960px;
+	height:640px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:2;
+}
+
 #character_select {
 	background-image:url('character_select_vanilla.png');
 	width:960px;

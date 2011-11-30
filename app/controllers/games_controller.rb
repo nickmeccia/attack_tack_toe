@@ -3,6 +3,7 @@ class GamesController < ApplicationController
   def human_vs_computer
     first_player = rand(2)
     if first_player == 0
+      sleep 5
       @game = Game.new(Human.new(params[:player_one_color]), Minimax.new("red"))
       session[:game] = @game
       session[:images] = {}
