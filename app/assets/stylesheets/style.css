@@ -1,7 +1,40 @@
+body {
+	background-color:black;
+}
+
 #layout {
 	position:relative;
 	width:960px;
 	height:640px;
+	margin-left:auto;
+	margin-right:auto;
+	top:30px;
+}
+
+/******** title screen **********/
+
+#title_screen {
+	background-image:url('title_screen.png');	
+	width:960px;
+	height:640px;
+}
+
+#one_player {
+	position:absolute;
+	width:60px;
+	height:35px;
+	top:545px;
+	left:732px;
+	z-index:1;
+}
+
+#two_players {
+	position:absolute;
+	width:60px;
+	height:35px;
+	top:545px;
+	left:808px;
+	z-index:1;
 }
 
 /******** character select *********/
@@ -52,9 +85,6 @@ a.cyan_player:hover {
 	position:absolute;
 	left:411px;
 }
-
-
-
 
 /*********** board layout ***********/
 
