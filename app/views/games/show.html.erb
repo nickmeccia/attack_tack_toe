@@ -24,15 +24,23 @@
 	</div>
 
 	<div id="player_two_sidebar">
-			<%= image_tag "#{@game.player_two.team}_sidebar.png" %>
+		<%= image_tag "#{@game.player_two.team}_sidebar.png" %>
 	</div>
 
+	<% if @game.over? %>
+		<div id="game_over_banner">
+			<div id="yes_button">
+				<% if has_computer_player?(@game) %>
+					<%= link_to image_tag("replay_button.png"), human_vs_computer_path(:player_one_color => @game.player_one.team) %>
+				<% else %>
+					<%= link_to image_tag("replay_button.png"), human_vs_human_path(:player_one_color => @game.player_one.team, :player_two_color => @game.player_two.team) %>
+				<% end %>
+			</div>
+			<div id="no_button">
+				<%= link_to image_tag("replay_button.png"), root_path %>
+			</div>
+			<%= image_tag "#{game_over_image(@game)}" %>
+		</div>
+	<% end %>
+
 </div>
-
-
-<%= link_to "restart", root_path %>
-
-<% if @game.over? %>
-	The game is ova!
-	<%= link_to "restart", root_path %>
-<% end %>

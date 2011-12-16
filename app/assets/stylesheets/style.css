@@ -126,5 +126,32 @@ a.cyan_player:hover {
 	width:140px;
 	height:140px;
 	left:50px;
+}
 
+/******* win/loss banner *******/
+
+#game_over_banner {
+	position:relative;
+	top:-108px;
+	left:0px;
+}
+
+#yes_button {
+/*	border:1px solid red;*/
+	position:absolute;
+	width:45px;
+	height:35px;
+	top:12px;
+	left:782px;
+	z-index:1;
+}
+
+#no_button {
+/*	border:1px solid red;*/
+	position:absolute;
+	width:45px;
+	height:35px;
+	top:12px;
+	left:832px;
+	z-index:1;
 }

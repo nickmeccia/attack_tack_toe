@@ -1,7 +1,7 @@
 PATH
   remote: ~/desktop/rails/tic-tac-toe
   specs:
-    nick_tac_toe (0.1.3)
+    nick_tac_toe (0.1.4)
 
 GEM
   remote: http://rubygems.org/
